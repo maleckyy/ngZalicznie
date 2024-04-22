@@ -1,0 +1,39 @@
+@import "../../variables";
+@import "../../../styles.scss";
+
+.employee_card {
+  @include card-size;
+  background-color: $card-background-color;
+  color: $primary-text-color;
+
+  &-info {
+    @include flex-column;
+
+    .name {
+      margin-top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .salary {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  &-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    span {
+      font-size: 30px;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
