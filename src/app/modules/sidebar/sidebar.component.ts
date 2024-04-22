@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  private readonly router:Router = inject(Router)
+  private readonly router: Router = inject(Router)
   links = Links
 
   navigateToPages(path: string):void {
