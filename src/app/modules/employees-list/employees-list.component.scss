@@ -2,11 +2,13 @@
 
 .employees_component {
     @include flex-column;
+
     &-intro{
         text-align: center;
         margin-bottom: 50px;
     }
 }
+
 .employees_component-all {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
