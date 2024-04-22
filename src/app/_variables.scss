@@ -1,5 +1,12 @@
-$primary-text-color: white;
-$card-background-color: black;
+
+$white: #FFF;
+$black: #000;
+$primary-text-color: $white;
+$card-background-color: $black;
+$gap-size: 16px;
+$primary-app: #0E46A3;
+$nav-hover: #E5EAFB;
+
 
 @mixin flex-column {
     display: flex;
@@ -19,3 +26,5 @@ $card-background-color: black;
     height: 200px;
     border-radius: 20px;
 }
+
+

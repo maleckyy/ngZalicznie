@@ -1,0 +1,38 @@
+@import '../../variables';
+
+.title {
+  color: $primary-app;
+  font-weight: 700;
+  font-size: 46px;
+  margin-bottom: 50px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .link {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.1s;
+    cursor: pointer;
+    border-radius: 8px;
+
+    .icon {
+      color: $primary-app;
+    }
+
+    .link-name {
+      font-weight: 500;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      color: $primary-app;
+    }
+  }
+}
