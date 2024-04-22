@@ -1,1 +1,21 @@
-<p>add-employee works!</p>
+<form [formGroup]="userFormData">
+  <div class="input-group">
+    <label for="username">First name</label>
+    <input formControlName="firstName" nz-input name="firstName" id="firstName" placeholder="First name" required/>
+  </div>
+  <div class="input-group">
+    <label for="username">Last name</label>
+    <input formControlName="lastName" nz-input name="lastName" id="lastName" placeholder="Last name" required/>
+  </div>
+  <div class="input-group">
+    <label for="username">Salary</label>
+    <input formControlName="salary" nz-input name="salary" id="salary" placeholder="Salary" required/>
+  </div>
+  <div class="input-group">
+    <label for="username">Programmer title</label>
+    <input formControlName="programmerTitle" nz-input name="programmerTitle" id="programmerTitle" placeholder="Programmer title" required/>
+  </div>
+  <div class="button-wrapper">
+    <button (click)="addEmployee()" [disabled]="!userFormData.valid">Add</button>
+  </div>
+</form>
