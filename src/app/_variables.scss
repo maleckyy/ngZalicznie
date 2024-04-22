@@ -1,4 +1,30 @@
+
+$white: #FFF;
+$black: #000;
+$primary-text-color: $white;
+$card-background-color: $black;
 $gap-size: 16px;
 $primary-app: #0E46A3;
 $nav-hover: #E5EAFB;
-$white: #FFF;
+
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin card-size {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+
