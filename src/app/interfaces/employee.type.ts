@@ -1,3 +1,7 @@
 export interface EmployeeType {
-  name: string;
+  id: string;
+  firstName: string;
+  lastName: string;
+  salary: number;
+  programmerTitle: string;
 }
