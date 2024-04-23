@@ -7,21 +7,25 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: $gap-size;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
+  background-color: $page-bgc;
 
   .sider {
-    width: 100%;
-    max-width: 200px;
-    padding: 20px;
-    min-height: 100%;
+    width: 350px;
+    min-width: 300px;
+    padding: 20px 40px;
+    min-height: calc(100vh - $sider-margins * 2);
+    background-color: $white;
+    margin: $sider-margins;
+    border-radius: $sider-radius;
   }
 
   .content {
     width: 100%;
-    background-color: #EEF5FF;
     padding: 20px;
+    padding-left: 0;
     min-height: 100%;
+    min-height: 100vh;
   }
 }

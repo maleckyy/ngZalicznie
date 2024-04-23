@@ -3,6 +3,12 @@
 form {
   margin-top: 40px;
 
+  .form-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
   .input-group {
     width: 100%;
     display: flex;

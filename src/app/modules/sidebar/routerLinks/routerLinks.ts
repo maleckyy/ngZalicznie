@@ -5,6 +5,11 @@ export const Links = [
     name: "Home"
   },
   {
+    path: "/project-list",
+    icon: "project",
+    name: "Projets list"
+  },
+  {
     path: "/employee-list",
     icon: "team",
     name: "Employees list"
@@ -13,10 +18,5 @@ export const Links = [
     path: "/employee-new",
     icon: "user-add",
     name: "Add employee"
-  },
-  {
-    path: "/project-list",
-    icon: "project",
-    name: "Projets list"
   },
 ]
