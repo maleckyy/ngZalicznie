@@ -11,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: "employee/:id",
-    loadComponent: () => import("./modules/employee-details/employee-details.component").then(x => x.EmployeeDetailsComponent)
+    loadComponent: () => import("./modules/add-employee/add-employee.component").then(x => x.AddEmployeeComponent)
   },
   {
     path: "employee-new",
@@ -26,9 +26,3 @@ export const routes: Routes = [
     redirectTo: ''
   },
 ];
-// home
-//emp list > dodac i edyt V
-// add-emp ten sam form
-// edit-emp ten sam form
-// project [4x proj] projet [ idEmp ]
-

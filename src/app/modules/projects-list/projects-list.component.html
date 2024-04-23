@@ -1,1 +1,18 @@
-<p>projects-list works!</p>
+<div class="profiles-page">
+
+  <ng-container *ngIf="(projects$ | async) as projects; else loader">
+    <div class="project-wrapper" *ngFor="let project of projects">
+      <!-- tuytaj dac nazwe proijetu i jakos wymyslic wyswietlanie osób, jakas rozwijana lista z ng-zorro -->
+      <!-- https://ng.ant.design/components/collapse/en < fajny component do tego -->
+      <!-- p zeby dla testu -->
+      <p>{{ project.projectName }}</p>
+    </div>
+  </ng-container>
+
+</div>
+
+<ng-template #loader>
+  <!-- ZROBIC KOMPOBNET W SHARED I WSTAWIC TU I W EMPLOYESLIST -->
+  <!-- https://ng.ant.design/components/spin/en < component -->
+  <div class="">loding</div>
+</ng-template>

@@ -12,7 +12,7 @@ export class EmployeeService {
 
   getEmployees() {
     return this.http.get(API_URL + "/employees.json").pipe(
-      map((employees:any) => {
+      map((employees: any) => {
         const employeesList: EmployeeType[] = []
         for (const key in employees) {
           const employee: EmployeeType = {
@@ -24,20 +24,24 @@ export class EmployeeService {
           };
           employeesList.unshift(employee)
         };
-        return employees
+        return employeesList
       })
     )
   }
 
-  addNewEmployee(employee: EmployeeType) {
-    return this.http.post(API_URL + "/employees.json", employee)
+  getEmployeeById(id: string) {
+    return this.http.get(`${API_URL}/employees/${id}.json`)
   }
 
   editEmployee(employee: EmployeeType) {
-    return this.http.patch(`${API_URL}/employees/${employee.id}.json`, employee)
+    if(employee.id){
+      return this.http.patch(`${API_URL}/employees/${employee.id}.json`, employee)
+    } else {
+      return this.http.post(API_URL + "/employees.json", employee)
+    }
   }
 
-  deleteEmployee(id:string) {
+  deleteEmployee(id: string) {
     return this.http.delete(`${API_URL}/employees/${id}.json`)
   }
 }
