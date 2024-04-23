@@ -7,6 +7,13 @@
   </div>
   <div class="employee_card-buttons">
     <span (click)="navigateToEdit()" nz-icon nzType="edit" nzTheme="outline"></span>
-    <span (click)="deleteUser()" nz-icon nzType="delete" nzTheme="outline"></span>
+    <span 
+      (nzOnConfirm)="deleteUser()"
+      nz-icon 
+      nz-popconfirm 
+      nzPopconfirmTitle="Are you sure you want to delete this employee?" 
+      nzType="delete" 
+      nzTheme="outline">
+    </span>
   </div>
 </div>

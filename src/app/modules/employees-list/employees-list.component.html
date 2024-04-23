@@ -5,7 +5,7 @@
     </div>
     <div class="employees_component-all">
       <ng-container *ngIf="( employees$ | async ) as employees; else loader">
-        <app-employee-card *ngFor="let employee of employees" [employee]="employee"/>
+        <app-employee-card (refreshList)="refreshObservable()" *ngFor="let employee of employees" [employee]="employee"/>
       </ng-container>
     </div>
 </div>

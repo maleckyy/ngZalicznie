@@ -16,5 +16,13 @@ import { LoadingComponent } from 'app/shared-components/loading/loading.componen
 export class EmployeesListComponent {
   private readonly employeeService = inject(EmployeeService)
 
-  employees$: Observable<EmployeeType[]> = this.employeeService.getEmployees()
+  employees$: Observable<EmployeeType[]> = this.getEmployees()
+
+  refreshObservable() {
+    this.employees$ = this.getEmployees()
+  }
+
+  getEmployees() {
+    return this.employeeService.getEmployees()
+  }
 }

@@ -4,7 +4,7 @@
       <nz-collapse>
         <nz-collapse-panel *ngFor="let project of projects" [nzHeader]="project.projectName" [nzDisabled]="project.employees.length === 0">
           <ul class="employee-list-wrapper" *ngFor="let employee of project.employees">
-            <app-employee-list-item [employeeId]="employee"/>
+            <app-employee-list-item [employeeId]="employee"/> <!--DO OSTYLOWANIA-->
           </ul>
         </nz-collapse-panel>
       </nz-collapse>
