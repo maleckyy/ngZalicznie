@@ -1,16 +1,15 @@
 <div class="profiles-page">
-
   <ng-container *ngIf="(projects$ | async) as projects; else loader">
     <div class="project-wrapper">
       <nz-collapse>
-        <nz-collapse-panel *ngFor="let project of projects" [nzHeader]="project.projectName">
-          {{project.employees}} <!-- nie wiem czy to tak ma być, nie kumam czym jest enum projects w interfejsie -->
+        <nz-collapse-panel *ngFor="let project of projects" [nzHeader]="project.projectName" [nzDisabled]="project.employees.length === 0">
+          <ul class="employee-list-wrapper" *ngFor="let employee of project.employees">
+            <app-employee-list-item [employeeId]="employee"/>
+          </ul>
         </nz-collapse-panel>
       </nz-collapse>
-      <!-- tuytaj dac nazwe proijetu i jakos wymyslic wyswietlanie osób, jakas rozwijana lista z ng-zorro -->
     </div>
   </ng-container>
-
 </div>
 
 <ng-template #loader>

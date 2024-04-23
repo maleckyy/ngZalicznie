@@ -1,9 +1,9 @@
 <div class="employee_card">
   <div class="employee_card-info">
-    <p class="name">{{employee.firstName}}</p>
-    <p class="name">{{employee.lastName}}</p>
-    <p class="position">{{ employee.programmerTitle}}</p>
-    <p class="salary">{{ employee.salary| currency}}</p>
+    <p class="name">{{ employee.firstName }}</p>
+    <p class="name">{{ employee.lastName }}</p>
+    <p class="position">{{ employee.programmerTitle }}</p>
+    <p class="salary">{{ employee.salary | currency}}</p>
   </div>
   <div class="employee_card-buttons">
     <span (click)="navigateToEdit()" nz-icon nzType="edit" nzTheme="outline"></span>
