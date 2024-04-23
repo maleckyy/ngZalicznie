@@ -12,13 +12,10 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   styleUrl: './employee-card.component.scss',
 })
 export class EmployeeCardComponent {
-  // wykrzyknik powoduke ze nie musze deklaowac bo mowie nim ts ze takie cos napewno wystąpi i nie bedzie null | undefined
   @Input() employee!: EmployeeType;
   private readonly router: Router = inject(Router);
-  salary: number = 1000;
 
   navigateToEdit(): void {
-    // tu dodałem zeby szło po id
     this.router.navigate(['employee', this.employee.id]);
   }
 
