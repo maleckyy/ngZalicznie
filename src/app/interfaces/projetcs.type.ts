@@ -5,7 +5,7 @@ export interface ProjetsType {
 }
 
 export enum Projects {
-  "Hospital Web App" = 0,
-  "E-Commerce" = 1,
-  "No project" = 2
+  "Hospital Web App",
+  "E-Commerce",
+  "No project"
 }

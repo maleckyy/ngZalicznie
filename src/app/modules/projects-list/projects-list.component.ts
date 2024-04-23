@@ -3,11 +3,14 @@ import { ProjectsService } from '../services/projects.service';
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
 import { ProjetsType } from 'app/interfaces/projetcs.type';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { LoadingComponent } from 'app/shared-components/loading/loading.component';
+import { EmployeeListItemComponent } from 'app/shared-components/employee-list-item/employee-list-item.component';
 
 @Component({
   selector: 'app-projects-list',
   standalone: true,
-  imports: [NgIf, AsyncPipe, NgFor],
+  imports: [NgIf, AsyncPipe, NgFor, NzCollapseModule, LoadingComponent, EmployeeListItemComponent],
   templateUrl: './projects-list.component.html',
   styleUrl: './projects-list.component.scss'
 })

@@ -28,7 +28,6 @@ export class AddEmployeeComponent {
       this.employeeId = params['id'];
       this.employeeService.getEmployeeById(params['id']).subscribe(employee => {
         this.userFormData.patchValue(employee)
-        console.log(employee)
       })
     }
   });
@@ -46,9 +45,10 @@ export class AddEmployeeComponent {
       }),
       finalize(() => {
         this.notification.success("","Success")
+        this.router.navigate(['employee-list'])
       })
     ).subscribe()
-    this.router.navigate(['employee-list'])
+    
   }
 
 }

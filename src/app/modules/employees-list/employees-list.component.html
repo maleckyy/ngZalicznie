@@ -4,22 +4,12 @@
         <p>Meet the squad</p>
     </div>
     <div class="employees_component-all">
-      <!--
-        ng contener to jak <></> w react wiec jest ale po kompilacji nie isnieje, wykorzystuje sie go tu bo
-        *ngIf - renderowanie warunkowe
-        i *ngFor - map z reacta
-        nie mogą byc razem na jedym elemencie
-
-        komponent app-employee-card dostaje w reaktowkich propach obiekt employee z typu EmployeeType wiecej info juz tam
-       -->
       <ng-container *ngIf="( employees$ | async ) as employees; else loader">
-        <app-employee-card *ngFor="let employee of employees" [employee]="employee"/>
+        <app-employee-card (refreshList)="refreshObservable()" *ngFor="let employee of employees" [employee]="employee"/>
       </ng-container>
     </div>
 </div>
 
 <ng-template #loader>
-  <!-- ZROBIC KOMPOBNET W SHARED I WSTAWIC TU I W EMPLOYESLIST -->
-  <!-- https://ng.ant.design/components/spin/en < component -->
-  <div class="">loading</div>
+  <app-loading/>
 </ng-template>
