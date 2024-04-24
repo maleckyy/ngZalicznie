@@ -5,8 +5,9 @@ export class EmployeeBuilder {
     return new FormGroup({
       firstName: new FormControl<string>('', Validators.required),
       lastName: new FormControl<string>('', Validators.required),
-      salary: new FormControl<number>(0 ,Validators.required),
+      salary: new FormControl<number>(0 , Validators.required),
       programmerTitle: new FormControl<string>('', Validators.required),
+      project: new FormControl<number>(0, Validators.required)
     });
   }
 }

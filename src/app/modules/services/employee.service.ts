@@ -20,7 +20,8 @@ export class EmployeeService {
             firstName: employees[key].firstName,
             lastName: employees[key].lastName,
             salary: employees[key].salary,
-            programmerTitle: employees[key].programmerTitle
+            programmerTitle: employees[key].programmerTitle,
+            project: employees[key].project
           };
           employeesList.unshift(employee)
         };

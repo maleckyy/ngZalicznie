@@ -1,9 +1,5 @@
-<ng-container *ngIf="(employee$ | async) as employee">
-  <!-- pojedynczy element listy co wyskakuje na kazdego pracownika w projekcie -->
-  <!-- do ostylowania -->
-  <li>
-    <div class="">
-      {{employee.firstName}}
-    </div>
-  </li>
-</ng-container>
+<li>
+  <div class="">
+    {{employee.firstName}} {{employee.lastName}}
+  </div>
+</li>

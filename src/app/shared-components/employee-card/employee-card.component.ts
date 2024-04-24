@@ -36,26 +36,7 @@ export class EmployeeCardComponent {
       finalize(() => {
         this.notification.success("","Employee Deleted")
         this.refreshList.emit()
-        // Tu będzie emit
       })
     ).subscribe();
-
-    /*
-      TODO
-      zrobic usuwanie zawodnika z wykorzystaniem https://ng.ant.design/components/popconfirm/en zeby nie było przypadkowo
-      jak sie nie uda dla ciebie to luz bo to jest z subskrybowaniem wiec w razie czego ogarniemy razem
-      jak cos to wszyskie operacje są w serwisie EmployeeService
-      wykorzystanie go w employe list jest
-    */
   }
 }
-
-/*
-  inpyt to pracownik
-  do zrobienia zamienienie go w szablonie html na {{ wartosc }}
-
-  i przerobienie tego na te liste + RWD tej listy
-
-
-  DODAĆ EMITA PRZY USUNIECIU, ZEBY W TEJ LISCIE ZREFRESZOWAĆ POBRANIE DANYCH
-*/

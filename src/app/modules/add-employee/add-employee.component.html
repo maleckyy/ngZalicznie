@@ -5,16 +5,24 @@
     <input formControlName="firstName" nz-input name="firstName" id="firstName" placeholder="First name" required/>
   </div>
   <div class="input-group">
-    <label for="username">Last name</label>
+    <label for="lastName">Last name</label>
     <input formControlName="lastName" nz-input name="lastName" id="lastName" placeholder="Last name" required/>
   </div>
   <div class="input-group">
-    <label for="username">Salary</label>
-    <input formControlName="salary" nz-input name="salary" id="salary" placeholder="Salary" required/>
+    <label for="salary">Salary</label>
+    <nz-input-number nz-input formControlName="salary" name="salary" id="salary" [nzMin]="0" [nzStep]="10" required placeholder="Salary"/>
   </div>
   <div class="input-group">
-    <label for="username">Programmer title</label>
+    <label for="programmerTitle">Programmer title</label>
     <input formControlName="programmerTitle" nz-input name="programmerTitle" id="programmerTitle" placeholder="Programmer title" required/>
+  </div>
+  <div class="input-group">
+    <label for="project">Programmer title</label>
+    <nz-select class="select-input" formControlName="project" name="project">
+      <ng-container *ngFor="let option of projectsOptions">
+        <nz-option [nzValue]="option.value" [nzLabel]="option.label"></nz-option>
+      </ng-container>
+    </nz-select>
   </div>
   <div class="button-wrapper">
     <button (click)="updateEmployee()" [disabled]="!userFormData.valid">{{ buttonText() }}</button>

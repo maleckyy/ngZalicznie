@@ -4,4 +4,5 @@ export interface EmployeeType {
   lastName: string;
   salary: number;
   programmerTitle: string;
+  project: number;
 }
