@@ -14,7 +14,6 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 export class EmployeeListItemComponent {
   @Input() employee!: EmployeeType
   @Input() index!: number
-
   private readonly router: Router = inject(Router)
 
   navigateToEdit() {
