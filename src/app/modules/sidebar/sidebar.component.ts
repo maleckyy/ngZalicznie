@@ -2,12 +2,12 @@ import { Component, inject } from '@angular/core';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { Links } from './routerLinks/routerLinks'
 import { NgFor } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [NzIconModule, NgFor],
+  imports: [NzIconModule, NgFor, RouterModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })

@@ -21,6 +21,7 @@ nav {
     transition: all 0.1s;
     cursor: pointer;
     border-radius: 8px;
+    padding: 3px 10px;
 
     .icon {
       color: $primary-app;
@@ -33,6 +34,15 @@ nav {
     &:hover {
       transform: scale(1.02);
       color: $primary-app;
+    }
+  }
+
+  .active-link {
+    font-weight: 700;
+    background-color: $primary-app;
+
+    .icon, .link-name {
+      color: $white;
     }
   }
 }
