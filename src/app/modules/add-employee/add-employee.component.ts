@@ -6,11 +6,15 @@ import { EmployeeService } from '../services/employee.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { catchError, finalize, throwError } from 'rxjs';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { projectsList } from './projects-options';
+import { NgFor } from '@angular/common';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 
 @Component({
   selector: 'app-add-employee',
   standalone: true,
-  imports: [ReactiveFormsModule, NzFormModule],
+  imports: [ReactiveFormsModule, NzFormModule, NzSelectModule, NzInputNumberModule, NgFor],
   templateUrl: './add-employee.component.html',
   styleUrl: './add-employee.component.scss'
 })
@@ -22,7 +26,7 @@ export class AddEmployeeComponent {
 
   employeeId: string | null = null
   userFormData = EmployeeBuilder.build()
-
+  projectsOptions = projectsList
   paramsSubscription = this.route.params.subscribe(params => {
     if(params['id']) {
       this.employeeId = params['id'];
@@ -48,7 +52,5 @@ export class AddEmployeeComponent {
         this.router.navigate(['employee-list'])
       })
     ).subscribe()
-    
   }
-
 }
