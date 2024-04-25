@@ -55,4 +55,8 @@ export class ProjectsListComponent {
       this.isLoading = false
     })
   ).subscribe()
+
+  getListTitle( title: string, length: number): string {
+    return `${title} (${length})`
+  }
 }

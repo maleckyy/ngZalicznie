@@ -4,9 +4,9 @@
   <ng-container *ngIf="!isLoading; else loader">
     <div class="project-wrapper">
       <nz-collapse>
-        <nz-collapse-panel *ngFor="let project of projects" [nzHeader]="project.title" [nzDisabled]="project.employees.length === 0">
-          <ul class="employee-list-wrapper" *ngFor="let employee of project.employees">
-            <app-employee-list-item [employee]="employee"/>
+        <nz-collapse-panel *ngFor="let project of projects" [nzHeader]="getListTitle(project.title, project.employees.length) " [nzDisabled]="project.employees.length === 0">
+          <ul class="employee-list-wrapper" *ngFor="let employee of project.employees; index as i">
+            <app-employee-list-item [employee]="employee" [index]="i"/>
           </ul>
         </nz-collapse-panel>
       </nz-collapse>

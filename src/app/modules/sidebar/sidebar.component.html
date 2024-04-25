@@ -1,11 +1,11 @@
 <div class="sider">
-    <div class="title">CRM</div>
-    <nav>
-      <ng-container *ngFor="let link of links">
-        <div class="link" [routerLink]="link.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
-          <span class="icon" nz-icon [nzType]="link.icon" nzTheme="outline"></span>
-          <div class="link-name">{{link.name}}</div>
-        </div>
-      </ng-container>
-    </nav>
+  <div class="title">CRM</div>
+  <nav>
+    <ng-container *ngFor="let link of links">
+      <div class="link" [routerLink]="link.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
+        <span class="icon" nz-icon [nzType]="link.icon" nzTheme="outline"></span>
+        <div class="link-name">{{link.name}}</div>
+      </div>
+    </ng-container>
+  </nav>
 </div>

@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { catchError, finalize, throwError } from 'rxjs';
 import { NzSelectModule } from 'ng-zorro-antd/select';
-import { projectsList } from './projects-options';
+import { programmerTitleList, projectsList } from './projects-options';
 import { NgFor } from '@angular/common';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 
@@ -27,6 +27,7 @@ export class AddEmployeeComponent {
   employeeId: string | null = null
   userFormData = EmployeeBuilder.build()
   projectsOptions = projectsList
+  programmerTitleOptions = programmerTitleList
   paramsSubscription = this.route.params.subscribe(params => {
     if(params['id']) {
       this.employeeId = params['id'];

@@ -37,3 +37,19 @@
     }
   }
 }
+
+@media only screen and (max-width: $responsive_small) {
+  .content {
+    .salary-chart {
+      flex: 2;
+
+      #canvas {
+        min-width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 300px;
+        aspect-ratio: unset;
+      }
+    }
+  }
+}
