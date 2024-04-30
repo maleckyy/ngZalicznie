@@ -2,14 +2,19 @@
 @import "../../../styles.scss";
 
 .employee_card {
-  @include card-size;
-  background-color: $card-background-color;
-  color: $primary-text-color;
-  position: relative;
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: $sider-radius;
 
   &-info {
-    @include flex-column;
-    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
     .name {
       text-align: center;
@@ -24,19 +29,18 @@
   }
 
   &-buttons {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-
     span {
       font-size: 30px;
       transition: 0.3s ease;
+      margin-left: 10px;
 
       &:hover {
         transform: scale(1.1);
       }
+    }
+
+    .delete-icon {
+      color: $warning-red;
     }
   }
 }

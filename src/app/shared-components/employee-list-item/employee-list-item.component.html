@@ -1,5 +1,5 @@
 <li>
   <div class="list-number">{{ index + 1 }}.</div>
   <div class="employee-details">{{ employee.firstName | titlecase }} {{ employee.lastName | titlecase }} <span class="programmer-title">({{ employee.programmerTitle }})</span></div>
-  <span nz-icon nzType="question-circle" nzTheme="outline" (click)="navigateToEdit()"></span>
+  <span nz-icon nzType="edit" nzTheme="outline" (click)="navigateToEdit()"></span>
 </li>

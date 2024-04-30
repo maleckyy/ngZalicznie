@@ -11,7 +11,12 @@
 
 .employees_component-all {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 10px;
+    width: 100%;
+    gap: $gap-size;
+
+    @media only screen and (max-width: $responsive_tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 }

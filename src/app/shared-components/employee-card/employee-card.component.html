@@ -1,18 +1,18 @@
 <div class="employee_card">
   <div class="employee_card-info">
-    <p class="name">{{ employee.firstName }}</p>
-    <p class="name">{{ employee.lastName }}</p>
+    <p class="name">{{ employee.firstName + " " + employee.lastName}}</p>
     <p class="position">{{ employee.programmerTitle }}</p>
     <p class="salary">{{ employee.salary | currency}}</p>
   </div>
   <div class="employee_card-buttons">
     <span (click)="navigateToEdit()" nz-icon nzType="edit" nzTheme="outline"></span>
-    <span 
+    <span
+      class="delete-icon"
       (nzOnConfirm)="deleteUser()"
-      nz-icon 
-      nz-popconfirm 
-      nzPopconfirmTitle="Are you sure you want to delete this employee?" 
-      nzType="delete" 
+      nz-icon
+      nz-popconfirm
+      nzPopconfirmTitle="Are you sure you want to delete this employee?"
+      nzType="delete"
       nzTheme="outline">
     </span>
   </div>
