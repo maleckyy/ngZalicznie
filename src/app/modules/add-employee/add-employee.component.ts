@@ -38,7 +38,7 @@ export class AddEmployeeComponent {
   });
 
   buttonText(): string {
-    return this.employeeId ? "Edit" : 'Add'
+    return this.employeeId ? "Edytuj" : 'Dodaj'
   }
 
   updateEmployee(): void {
