@@ -18,7 +18,5 @@ Aplikacja do zarządzania pracownikami w firmie
 - Przeglądanie projektów
 - Zarządzanie pracownikami w projektach
 
-## Zrzutu ekranu
-
-
 ## Link do aplikacji
+https://majestic-dragon-9802b4.netlify.app/
