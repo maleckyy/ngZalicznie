@@ -7,16 +7,16 @@ export const Links = [
   {
     path: "/project-list",
     icon: "project",
-    name: "Projets list"
+    name: "Lista projektów"
   },
   {
     path: "/employee-list",
     icon: "team",
-    name: "Employees list"
+    name: "Lista pracowników"
   },
   {
     path: "/employee-new",
     icon: "user-add",
-    name: "Add employee"
+    name: "Dodaj pracownika"
   },
 ]

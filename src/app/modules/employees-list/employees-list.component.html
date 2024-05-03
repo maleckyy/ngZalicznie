@@ -1,13 +1,12 @@
 <div class="employees_component">
-    <div class="employees_component-intro">
-        <h2>List of Our Employees</h2>
-        <p>Meet the squad</p>
-    </div>
-    <div class="employees_component-all">
-      <ng-container *ngIf="( employees$ | async ) as employees; else loader">
-        <app-employee-card (refreshList)="refreshObservable()" *ngFor="let employee of employees" [employee]="employee"/>
-      </ng-container>
-    </div>
+  <div class="employees_component-intro">
+    <h2>Lista pracowników</h2>
+  </div>
+  <div class="employees_component-all">
+    <ng-container *ngIf="( employees$ | async ) as employees; else loader">
+      <app-employee-card (refreshList)="refreshObservable()" *ngFor="let employee of employees" [employee]="employee"/>
+    </ng-container>
+  </div>
 </div>
 
 <ng-template #loader>

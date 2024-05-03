@@ -1,24 +1,24 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { EmployeeCardComponent } from 'app/shared-components/employee-card/employee-card.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { EmployeeService } from '../services/employee.service';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Chart }from 'chart.js/auto';
 import { EmployeeType } from 'app/interfaces/employee.type';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [EmployeeCardComponent, NzCardModule, AsyncPipe, NgIf],
+  imports: [EmployeeCardComponent, NzCardModule, NgIf],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  @ViewChild('chart', {static: true}) chartRef!: ElementRef;
+  @ViewChild('chart', { static: true }) chartRef!: ElementRef;
   private readonly employeeService = inject(EmployeeService)
 
+  barWidth: number = 20
   chart!: Chart
-  employeesList$ = this.employeeService.getEmployees()
   employeesListSubscription = this.employeeService.getEmployees().subscribe((employeesList: EmployeeType[]) => {
 
     const labels: string[] =  []
@@ -38,7 +38,7 @@ export class HomeComponent {
             label: 'Dochód',
             data: values,
             borderWidth: 1,
-            barThickness: 80,
+            barThickness: this.barWidth,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
             ],

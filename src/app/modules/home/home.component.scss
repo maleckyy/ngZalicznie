@@ -16,15 +16,6 @@
   flex-direction: column;
   gap: $gap-size;
 
-  .employees-count {
-    flex: 1;
-    max-width: 200px;
-
-    ::ng-deep .ant-card-body {
-      text-align: center;
-    }
-  }
-
   .salary-chart {
     flex: 2;
 
